@@ -1,19 +1,9 @@
-<mvc:View
+<!DOCTYPE xml>
+<core:View
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core" 
-	controllerName="fioritraining.src.controller.main">
-	
-	<Page 
-		title="Fiori Training">
-		<content>
-			<HBox>
-				<Button text="CLICK ME" press="onPress">
-					<layoutData>
-						<FlexItemData growFactor="1" />
-					</layoutData>
-				</Button>
-			</HBox>
-		</content>
-	</Page>
-</mvc:View>
+	controllerName="fioritraining.fioritraining.src.controller.main">
+	<Button id="btnSuccess" text="SAMPLE" press="onPress"/>
+
+</core:View>

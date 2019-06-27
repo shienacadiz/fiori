@@ -1,11 +1,11 @@
 sap.ui.define([
 	'sap/m/MessageToast',
-	'fioritraining/src/controller/main'
+	'sap/ui/core/mvc/Controller'
 	], function(MessageToast, Controller) { "use strict";
-		return Controller.extend("fioritraining.src.controller.main", {
+		return Controller.extend("fioritraining.fioritraining.src.controller.main", {
 	
-		onPress: function (evt) {
-			MessageToast.show("Pressed");
+		onPress: function () {
+			MessageToast.show("SUCCESS!");
 		}
 	
 	});
