@@ -1,0 +1,37 @@
+{
+	"_version": "1.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "fioritraining",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0"
+		},
+		"title": "Fiori Training",
+		"description": "Description here"
+	},
+	"sap.ui": {
+		"_version": "1.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.0",
+		"rootView": {
+			"viewName": "fioritraining.src.view.main",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {}
+			}
+		}
+	}
+}
