@@ -1,9 +1,12 @@
 <!DOCTYPE xml>
-<core:View
+<mvc:View
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core" 
 	controllerName="fioritraining.fioritraining.src.controller.main">
+	
+	
+	<Label text="{i18n>lblFamilyMembers}"></Label>
 	<Button id="btnSuccess" text="SAMPLE" press="onPress"/>
 
-</core:View>
+</mvc:View>
