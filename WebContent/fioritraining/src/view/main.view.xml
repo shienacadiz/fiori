@@ -7,6 +7,9 @@
 	
 	
 	<Label text="{i18n>lblFamilyMembers}"></Label>
+	<ComboBox items="{memberModel>/Members}">
+		<core:Item key="{memberModel>Value}" text="{memberModel>Value}" />
+	</ComboBox>
 	<Button id="btnSuccess" text="SAMPLE" press="onPress"/>
 
 </mvc:View>

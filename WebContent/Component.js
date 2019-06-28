@@ -16,7 +16,7 @@ sap.ui.define([
 			
 			var oRootPath = jQuery.sap.getModulePath("fioritraining");
 			var mConfig = this.getMetadata().getConfig();
-			
+					
 			this.initializei18nModel(oRootPath, mConfig);
 		},
 		
