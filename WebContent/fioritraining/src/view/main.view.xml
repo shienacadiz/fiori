@@ -10,6 +10,6 @@
 	<ComboBox items="{memberModel>/Members}">
 		<core:Item key="{memberModel>Value}" text="{memberModel>Value}" />
 	</ComboBox>
-	<Button id="btnSuccess" text="SAMPLE" press="onPress"/>
+	<Button id="btnSuccess" text="CLEAR" press="onPress"/>
 
 </mvc:View>

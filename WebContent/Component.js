@@ -12,6 +12,10 @@ sap.ui.define([
 		    }
 		},
 		init: function() {
+			//Initialise the ComponentContainer
+			sap.ui.getCore().AppContext = new Object();
+			sap.ui.getCore().AppContext.ComponentContainer = this;
+			
 			UIComponent.prototype.init.apply(this, arguments)
 			
 			var oRootPath = jQuery.sap.getModulePath("fioritraining");

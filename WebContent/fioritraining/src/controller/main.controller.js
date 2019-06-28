@@ -25,8 +25,11 @@ sap.ui.define([
 		},
 		
 		onPress: function () {
-			MessageToast.show("SUCCESS!");
+			var oComponentContainer = sap.ui.getCore().AppContext.ComponentContainer;
+			var i18nResourceBundle = oComponentContainer.getModel("i18n").getResourceBundle();
+			MessageToast.show(i18nResourceBundle.getText("msgClearComboBox"));
+			var oView = this.getView();
+			oView.getModel("memberModel").setProperty("/Members", "");
 		}
-	
 	});
 });
