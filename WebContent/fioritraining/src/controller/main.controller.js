@@ -22,6 +22,19 @@ sap.ui.define([
 					}]			
 			});
 			this.getView().setModel(oMembersModel, "memberModel");
+			
+			var oLanguageModel = new JSONModel({
+				"Values": [
+					{
+						"Key": "EN",
+						"Description": "English"
+					},
+					{
+						"Key": "PH",
+						"Description": "Tagalog"
+					}]			
+			});
+			this.getView().setModel(oLanguageModel, "languageModel");
 		},
 		
 		onPress: function () {
@@ -39,6 +52,16 @@ sap.ui.define([
 				this._pushNewProduct();
 			}.bind(this), 1000);
 			window.location.reload();
+		},
+		
+		//when user changed the language
+		handleLanguageChange : function (evt) {
+			MessageToast.show("LANGUAGE CHANGED!");	
+
+			var selectedLanguage = evt.getParameter("selectedItem");
+			sap.ui.getCore().getConfiguration().setLanguage(selectedLanguage.getKey());
+			
+			var oView = this.getView();
 		}
 	});
 });

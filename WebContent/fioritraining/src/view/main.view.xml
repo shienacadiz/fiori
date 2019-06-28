@@ -5,7 +5,6 @@
 	xmlns:core="sap.ui.core" 
 	controllerName="fioritraining.fioritraining.src.controller.main">
 	
-	
 	<Label text="{i18n>lblFamilyMembers}"></Label>
 	<ComboBox items="{memberModel>/Members}">
 		<core:Item key="{memberModel>Value}" text="{memberModel>Value}" />
@@ -13,4 +12,9 @@
 	<Button id="btnSuccess" text="CLEAR" press="onPress"/>
 
 	<PullToRefresh id="pullToRefresh" refresh="handleRefresh"/>
+	
+	<Label text="{i18n>lblLanguage}"></Label>
+	<ComboBox items="{languageModel>/Values}" selectionChange="handleLanguageChange">
+		<core:Item key="{languageModel>Key}" text="{languageModel>Description}" />
+	</ComboBox>
 </mvc:View>
