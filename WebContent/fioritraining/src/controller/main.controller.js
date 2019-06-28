@@ -30,6 +30,15 @@ sap.ui.define([
 			MessageToast.show(i18nResourceBundle.getText("msgClearComboBox"));
 			var oView = this.getView();
 			oView.getModel("memberModel").setProperty("/Members", "");
+		},
+		
+		// simulate a refresh of the date that lasts 2 secs
+		handleRefresh : function (evt) {
+			setTimeout(function () {
+				this.byId("pullToRefresh").hide();
+				this._pushNewProduct();
+			}.bind(this), 1000);
+			window.location.reload();
 		}
 	});
 });

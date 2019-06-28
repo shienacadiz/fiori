@@ -12,4 +12,5 @@
 	</ComboBox>
 	<Button id="btnSuccess" text="CLEAR" press="onPress"/>
 
+	<PullToRefresh id="pullToRefresh" refresh="handleRefresh"/>
 </mvc:View>
