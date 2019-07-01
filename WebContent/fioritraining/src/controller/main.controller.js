@@ -56,12 +56,12 @@ sap.ui.define([
 		
 		//when user changed the language
 		handleLanguageChange : function (evt) {
-			MessageToast.show("LANGUAGE CHANGED!");	
-
 			var selectedLanguage = evt.getParameter("selectedItem");
 			sap.ui.getCore().getConfiguration().setLanguage(selectedLanguage.getKey());
 			
-			var oView = this.getView();
+			var oComponentContainer = sap.ui.getCore().AppContext.ComponentContainer;
+			var i18nResourceBundle = oComponentContainer.getModel("i18n").getResourceBundle();
+			MessageToast.show(i18nResourceBundle.getText("msgChangedLanguage"));
 		}
 	});
 });
